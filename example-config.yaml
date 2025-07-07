@@ -1,0 +1,67 @@
+# ArtWall 挂画展示配置文件
+# 这是一个示例配置，展示了YAML格式的配置结构
+
+meta:
+  name: "示例挂画配置"
+  created: "2025-07-07T16:00:00.000Z"
+  version: "1.0"
+
+# 墙面设置
+wall:
+  width: 1000
+  height: 600
+  bgColor: "#f5f5f5"
+  bgImage: null  # 如果有背景图片，这里会显示 "已设置背景图片"
+
+# 画框配置列表
+frames:
+  - id: 1641234567890.123
+    shape: "rect"           # 形状：rect(长方形), square(正方形), circle(圆形), wedge(扇形)
+    x: 100                  # X坐标
+    y: 80                   # Y坐标
+    width: 150              # 宽度
+    height: 200             # 高度
+    borderWidth: 5          # 边框宽度
+    borderColor: "#8B4513"  # 边框颜色
+    matWidth: 8             # 衬纸宽度
+    matColor: "#ffffff"     # 衬纸颜色
+    painting: null          # 如果有画作，这里会显示 "已设置画作"
+    paintingUrl: "https://example.com/painting1.jpg"
+    fitMode: "cover"        # 适配模式：cover, contain, fill, none
+
+  - id: 1641234567891.456
+    shape: "circle"
+    x: 300
+    y: 150
+    width: 120
+    height: 120
+    borderWidth: 3
+    borderColor: "#333333"
+    matWidth: 5
+    matColor: "#f0f0f0"
+    painting: null
+    paintingUrl: null
+    fitMode: "contain"
+
+  - id: 1641234567892.789
+    shape: "square"
+    x: 500
+    y: 100
+    width: 140
+    height: 140
+    borderWidth: 4
+    borderColor: "#2c3e50"
+    matWidth: 10
+    matColor: "#ecf0f1"
+    painting: "已设置画作"
+    paintingUrl: null
+    fitMode: "cover"
+
+# 注释说明：
+# - 所有尺寸单位为像素(px)
+# - 颜色使用十六进制格式 (#RRGGBB)
+# - fitMode 选项说明：
+#   * cover: 保持比例，裁剪适配画框
+#   * contain: 保持比例，完整显示图片
+#   * fill: 拉伸填满画框
+#   * none: 原始尺寸显示 
