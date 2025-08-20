@@ -172,3 +172,5 @@
      </Card>
    );
  }
+
+export default React
