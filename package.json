@@ -1,0 +1,41 @@
+{
+  "name": "artwall-app",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Modern art wall display application with drag-and-drop frame editor",
+  "keywords": ["art", "gallery", "wall", "frames", "canvas", "react"],
+  "author": "ArtWall Team",
+  "license": "MIT",
+  "dependencies": {
+    "antd": "^5.13.7",
+    "js-yaml": "^4.1.0",
+    "konva": "^9.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-konva": "^18.2.10",
+    "use-image": "^1.1.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.8",
+    "vite-plugin-pwa": "^0.17.4"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "vite"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

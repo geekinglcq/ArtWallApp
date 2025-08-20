@@ -1,0 +1,356 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* App container */
+.app-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px;
+  min-height: 100vh;
+}
+
+/* Header styles */
+.app-header {
+  text-align: center;
+  margin-bottom: 32px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.app-title {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px !important;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3rem) !important;
+}
+
+.app-subtitle {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 0 !important;
+  opacity: 0.8;
+}
+
+/* Section styles */
+.section-title {
+  color: #1890ff !important;
+  font-weight: 600 !important;
+  margin-bottom: 16px !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.frame-count {
+  background: #f0f0f0;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  color: #666;
+}
+
+/* Canvas wrapper */
+.canvas-wrapper {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.canvas-wrapper:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.canvas-wrapper canvas {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Frame editor */
+.frame-editor-container {
+  max-height: 500px;
+  overflow-y: auto;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(5px);
+}
+
+.frame-editor-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.frame-editor-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.frame-editor-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.frame-editor-container::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+.add-frame-btn {
+  width: 100%;
+  margin-top: 16px;
+  height: 48px;
+  border-radius: 12px;
+  border: 2px dashed #d9d9d9;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.add-frame-btn:hover {
+  border-color: #1890ff;
+  background: rgba(24, 144, 255, 0.05);
+  transform: translateY(-1px);
+}
+
+/* Footer */
+.app-footer {
+  margin-top: 48px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.footer-features {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.footer-features span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-links a {
+  color: #1890ff;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #40a9ff;
+  text-decoration: underline;
+}
+
+/* Card enhancements */
+.ant-card {
+  border-radius: 12px !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08) !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease !important;
+}
+
+.ant-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12) !important;
+  transform: translateY(-1px);
+}
+
+.ant-card-head {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+  background: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Button enhancements */
+.ant-btn {
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+.ant-btn:hover {
+  transform: translateY(-1px);
+}
+
+.ant-btn-primary {
+  background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%) !important;
+  border: none !important;
+  box-shadow: 0 2px 8px rgba(24, 144, 255, 0.3) !important;
+}
+
+.ant-btn-primary:hover {
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.4) !important;
+}
+
+/* Form enhancements */
+.ant-form-item-label > label {
+  font-weight: 500 !important;
+  color: #333 !important;
+}
+
+.ant-input, .ant-input-number, .ant-select-selector {
+  border-radius: 8px !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.ant-input:focus, .ant-input-number:focus, .ant-select-focused .ant-select-selector {
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2) !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 16px;
+  }
+  
+  .app-header {
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .frame-editor-container {
+    max-height: 300px;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-features {
+    justify-content: center;
+  }
+  
+  .canvas-wrapper {
+    padding: 12px;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-features {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-features span {
+    width: fit-content;
+  }
+}
+
+/* Loading and transition animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.app-container > * {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Konva canvas cursor styles */
+.konvajs-content {
+  cursor: grab !important;
+  border-radius: 12px;
+}
+
+.konvajs-content:active {
+  cursor: grabbing !important;
+}
+
+/* Scrollbar styles for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Print styles */
+@media print {
+  .app-container {
+    background: white;
+  }
+  
+  .canvas-wrapper {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+}

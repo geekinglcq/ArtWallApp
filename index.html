@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ArtWall - 现代化的挂画展示设计工具，支持自定义墙面、画框、画作的所见即所得设计" />
+    <meta name="keywords" content="挂画,艺术,画廊,设计工具,画框,装饰" />
+    <meta name="author" content="ArtWall Team" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ArtWall - 挂画展示设计工具" />
+    <meta property="og:description" content="现代化的挂画展示设计工具，支持自定义墙面、画框、画作的所见即所得设计" />
+    <meta property="og:image" content="/og-image.png" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="ArtWall - 挂画展示设计工具" />
+    <meta property="twitter:description" content="现代化的挂画展示设计工具" />
+    
+    <!-- Theme -->
+    <meta name="theme-color" content="#1890ff" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="ArtWall" />
+    
+    <title>ArtWall - 挂画展示设计工具</title>
+    
+    <style>
+      /* Loading screen */
+      #loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        color: white;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      }
+      
+      .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 3px solid rgba(255,255,255,0.3);
+        border-radius: 50%;
+        border-top-color: white;
+        animation: spin 1s ease-in-out infinite;
+        margin-bottom: 20px;
+      }
+      
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+      
+      .loading-text {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 8px;
+      }
+      
+      .loading-subtitle {
+        font-size: 14px;
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loading">
+      <div class="loading-spinner"></div>
+      <div class="loading-text">🎨 ArtWall</div>
+      <div class="loading-subtitle">正在加载挂画设计工具...</div>
+    </div>
+    
+    <div id="root"></div>
+    
+    <script>
+      // Hide loading screen when app is ready
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const loading = document.getElementById('loading');
+          if (loading) {
+            loading.style.opacity = '0';
+            loading.style.transition = 'opacity 0.5s ease-out';
+            setTimeout(() => loading.remove(), 500);
+          }
+        }, 1000);
+      });
+    </script>
+    
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
